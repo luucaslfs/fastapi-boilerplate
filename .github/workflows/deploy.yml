@@ -39,4 +39,4 @@ jobs:
 
       - name: Deploy to GCP
         run: |
-          gcloud run deploy fastapi-boilerplate --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/fastapi-boilerplate:${{ github.sha }} --region us-central1 --platform managed --allow-unauthenticated
+          gcloud run deploy fastapi-boilerplate --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/fastapi-boilerplate:${{ github.sha }} --region us-central1 --platform managed --allow-unauthenticated --port 80
